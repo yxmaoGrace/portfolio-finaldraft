@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon1.png">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style_form.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/2d6f685057.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKTYTSPN9H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+  		gtag('config', 'G-PKTYTSPN9H');
+	</script>
+	<title>About Me</title>
+</head>
+
+<body>
+	<a class="back" href="#main">Skip to Main Content</a>
+	<header>
+		<img src="images/logo.jpeg" alt="" id = "logo">
+
+		<!-- hamburger -->
+		<input type="checkbox" id="navi-toggle" class="checkbox" />
+		<label for="navi-toggle" class="button">.
+			<span class="icon">&nbsp;</span>
+		</label>
+		<div class="background">&nbsp;</div>
+
+		<nav class="nav">
+			<ul class="list">
+				<li class="active item"><a href = "index.html" class="link">About Me</a></li>
+				<li class="item"><a href = "childhood.html" class="link">Childhood Memories</a></li>
+				<li class="item"><a href = "world.html" class="link">Around the World</a></li>
+				<li  class="item"><a href = "scale.html" class="link">Scoville Scale</a></li>
+			</ul>
+		</nav>
+		<h1 id="main" class="title">About Me</h1>
+	</header>
+
+	<main>
+		<p id="bgImage">Hi Everyone! This is Yixuan, a loyal spicy lover since early childhood. 
+			Growing up in Lanzhou, China, a city in northwestern China with a 
+			population of different ethnicities, I got the chance to taste food 
+			with diverse flavors. With all kinds of food using different spices, 
+			ingredients, and cooking methods, my all time favorite flavor is SPICINESS.</p>
+			<img src = "images/familymeal.jpg" alt = "Having meals with my family are my precious memories as a young girl." width="200"/>
+
+		<p>For me, spiciness is a strong, pungent flavor that always brings excitement 
+			and comfort. It is a flavor that stimulates my taste buds and makes any 
+			meal less insipid and boring. Adding a little spoon of pepper oil, 
+			or adding several slices of peppers into a dish expands the layers of flavor 
+			of that dish, which offers a chance of being surprised with an extra excitement 
+			while enjoying a meal. Moreover, spicy food accompanied me through many 
+			low-spirited days by warming up my mouth and stomach. The strong 
+			flavor of spiciness can help me to relax for a moment and gather myself 
+			together to move forward.</p>
+
+	<form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvolqnne" method="post">
+  
+		<fieldset id="fs-frm-inputs">
+		  <legend>Contact Me</legend>
+		  
+		  
+		  <label for="full-name"><i class="fa-solid fa-signature fa-lg"></i>Full Name</label>
+		  <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+			
+
+		  <label for="email-address"><i class="fa-solid fa-at fa-lg"></i>Email Address</label>
+		  <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+			
+
+		  <label for="phone_num"><i class="fa-solid fa-phone fa-lg"></i>Phone Number</label>
+		  <input type="tel" name="phone_num" id="phone_num" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required="">
+			
+		  
+		  <label for="message"><i class="fa-solid fa-message fa-lg"></i>Message</label>
+		  <textarea rows="5" name="message" id="message" placeholder="Please leave any message or questions you have." required=""></textarea>
+			
+		  <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+		</fieldset>
+			
+		<input type="submit" value="Submit">
+	  </form>
+	</main>
+
+	<footer>
+		<i class="fa-solid fa-pepper-hot"></i>
+		<p>Yixuan Mao &copy; 2022</p>
+	</footer>
+</body>
+</html>

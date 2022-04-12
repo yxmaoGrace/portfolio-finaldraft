@@ -1,0 +1,483 @@
+/*Style the body part */
+body{
+	/* Apply a Google Font */
+	font-family: 'Heebo', sans-serif;
+	line-height: 1.5;
+}
+
+
+/* display navigation bar in flex */
+/* header{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .nav_links{
+	display: flex;
+	flex-direction: column;
+  } */
+
+
+/*Change the styling for items in the nav section*/
+/* .list {
+	z-index: 200;
+	display:block;
+	position: fixed;
+	width:60%;
+	top: 40%;
+  }
+
+.item{
+	font-weight: bold;
+	background: #f3f17e;
+	padding:5px;
+	width:100%;
+	border: 2px dashed #38721d;
+	border-radius: 10px;
+	margin: 5px;
+	text-align: center;
+  }
+
+
+.active{
+	background: #c2dab6;
+    text-transform: uppercase;
+	text-align: center;
+	border: 2px solid #38721d;
+}
+
+a{
+	color:#183d08
+}
+
+a:hover{
+	font-style: italic;
+}
+
+.active a{
+	text-decoration: overline underline;
+	color: #555408;
+} */
+
+
+/* Creating a hamburger menu for navigation bar */
+/* hamburger */
+.checkbox {
+	display: none;
+  }
+  
+  .button {
+	position: relative;
+	background-color: white;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 5vh; 
+	right: 5vw; 
+	z-index: 2000;
+	box-shadow: 0 .2rem .5rem black;
+	text-align: center; 
+	cursor: pointer;
+	color: black;
+  }
+  
+  .background {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+	position: fixed;
+	top: 6vh; 
+	right: 6vw; 
+	background-image: radial-gradient(#c2dab6, black);
+	z-index: 1000;
+  
+	transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  .nav {
+	height: 50vh;
+	position: fixed;
+	top: 0;
+	right: -60vw;
+	z-index: 1500;
+	opacity: 0;
+	width: 0;
+	transition: all 0.8s;
+  }
+  
+  .list {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+	text-align: center;
+	width: 50%;
+  }
+  
+  .item{
+	font-weight: bold;
+	background: #f3f17e;
+	padding:5px;
+	display: block;
+	width: 100%;
+	border: 2px dashed #38721d;
+	border-radius: 10px;
+	margin: 5px;
+	text-align: center;
+  }
+  
+  .link:link,
+  .link:visited {
+	display: inline-block;
+	font-weight: bold;
+	/* padding: 1rem 2rem; */
+	color: #183d08;
+	text-decoration: none;
+	/* background-image: linear-gradient(
+	  120deg,
+	  transparent 0%,
+	  transparent 50%,
+	  white 50%
+	);
+	background-size: 220%; */
+	transition: all 0.4s;
+  }
+
+  .active{
+	background: #c2dab6;
+    text-transform: uppercase;
+	text-align: center;
+	border: 2px solid #38721d;
+}
+  
+  .link:hover {
+	font-style: italic;
+  }
+
+  .active .link{
+	text-decoration: overline underline;
+	color: #555408;
+}
+  
+  /* functionality */
+  .checkbox:checked ~ .background {
+	transform: scale(80);
+  }
+  .checkbox:checked ~ .nav {
+	opacity: 1;
+	width: 100%;
+	right: 0;
+  }
+  
+  /*  */
+  /* styling hamb ICON */
+  .icon {
+	position: absolute;
+	top: 60%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+  }
+  
+  .icon,
+  .icon::before,
+  .icon::after {
+	width: 1.5rem;
+	height: 5px;
+	background-color: gray;
+	display: inline-block;
+  }
+  
+  .icon::before,
+  .icon::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	transition: all 0.2s;
+  }
+  
+  .icon::before {
+	top: -0.8rem;
+  }
+  .icon::after {
+	top: 0.8rem;
+  }
+  
+  .button:hover icon:before {
+	top: -1rem;
+  }
+  .button:hover icon::after {
+	top: 1rem;
+  }
+  
+  .checkbox:checked + .button .icon {
+	background-color: transparent;
+  }
+  
+  .checkbox:checked + .button .icon::before {
+	top: 0;
+	transform: rotate(135deg);
+  }
+  .checkbox:checked + .button .icon::after {
+	top: 0;
+	transform: rotate(-135deg);
+  }
+
+
+/* skip back to main content */
+.back{
+	margin: 5px;
+	border: 2px solid #38721d;
+	padding: 2px;
+	width: 20%;
+	text-align: center;
+	transition: left 1s ease-out;
+	z-index: 1;
+	/* Requirement 3 code here*/
+	position: absolute;
+	left: -500px;
+}
+
+a.back:focus{
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    border-top: solid #f3f17e 2px;
+  } 
+
+
+/* Animate the logo */
+#logo{
+	position: relative;
+	margin: 20px 10px;
+	animation-name: lgmove;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	width: 200px;
+  }
+
+  @keyframes lgmove {
+	from {
+	  transform: rotate(-30deg) translateY(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: rotate(0deg) translateY(0%);
+	  opacity: 1.0;
+	}
+  }
+
+
+
+/* Style the headings*/
+h1{
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.title{
+	text-align: center;
+}
+
+h2{
+	font-size: 25px;
+	font-weight: bold;
+}
+
+h3{
+	font-size: 20px;
+	font-weight:400;
+}
+
+h3 span{
+	font-weight:bold;
+}
+
+
+/* Style the paragraphs */
+p{
+	margin: 10px;
+}
+
+
+/*Style the images*/
+main img{
+    max-height: 300px;
+    width:60%;
+    padding: 2px;
+    border-radius: 10px;
+    margin: 5px auto;
+	opacity:0.8;
+	display: block;
+}
+
+main img:nth-child(odd){
+    border: 3px dashed #38721d;
+}
+
+main img:nth-child(even){
+	border: 3px dotted #969303;
+}
+
+main img:hover{
+	width:60%;
+	opacity:1;
+	transition: 1s ease;
+}
+
+main img:nth-child(odd):hover{
+	 box-shadow: 5px 5px 4px 5px #c2dab6;
+ }
+
+main img:nth-child(even):hover{
+	box-shadow: 5px 5px 4px 5px #f3f17e;
+}
+
+
+/* Adding a background image to "Around the World" page */
+#bgImage{
+  background-image: url("../images/pepper4.jpg");
+  background-color: #4b4b4b;
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 100px;
+  font-size: 1.5em;
+  line-height: 2;
+  font-weight: 600;
+}
+
+
+/* Add font Awesome icons */
+.fa-pepper-hot{
+	font-size: 14px;
+	color: red;
+}
+
+/* creating grids for childhood page. */
+.gridContainer{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	row-gap: 30px;
+}
+
+.beefNoodle,
+.lamb,
+.luosifen{
+  grid-column: 1 /span 2;
+}
+
+.hotPot,
+.stirFry{
+  grid-column: 2 /span 2;
+}
+
+
+.beefNoodle_image,
+.lamb_image,
+.luosifen_image{
+  grid-column: 2 / span 2;
+  max-height: 500px;
+  overflow: hidden;
+  z-index: 1;
+  justify-self: right;
+}
+
+.hotPot_image,
+.stirFry_image{
+  grid-column: 1 / span 2;
+  max-height: 500px;
+  overflow: hidden;
+  z-index: 1;
+  justify-self: left;
+}
+
+
+.beefNoodle, .beefNoodle_image{
+  grid-row: 1 / 2;
+}
+
+.hotPot,.hotPot_image{
+  grid-row: 2 / 3;
+}
+
+.lamb, .lamb_image{
+  grid-row: 3 / 4;
+}
+
+.stirFry, .stirFry_image{
+  grid-row: 4 / 5;
+}
+
+.luosifen, .luosifen_image{
+	grid-row: 5 / 6;
+}
+
+
+.text{
+  align-self:center;
+  max-height: 25vh;
+  overflow: scroll;
+  z-index: 2;
+}
+
+.text{
+	background-color: rgba(255, 255, 255, .8);
+	border: 5px solid #183d08;
+	padding: 20px;
+  }  
+
+
+
+/* Creating flex for Around the World page. */
+.flexContainer{
+	display: flex;
+	flex-direction: column;
+}
+
+.salsas,
+.tomYum,
+.kimchi,
+.sik{
+	margin: 20px 10px;
+}
+
+
+
+/* style the footer */
+footer{
+	padding: 50px 0;
+	text-align: center;
+	color: #555408;
+	font-weight: bolder;
+	background-color:#c2dab6;
+	margin: 20px;
+}
+
+
+/** Set for prefers reduced motion **/
+@media screen and (prefers-reduced-motion: reduce){
+	#logo{
+	  animation: none;
+	}
+	html{
+		scroll-behavior: auto; /* Removes scroll animation */
+	  }
+	
+	  /*Turn off transition*/
+	  a.back {
+		-webkit-transition: initial; /* sets to default setting */
+		transition: initial; /* sets to default setting */
+	  }
+	
+	  /*Turn off parallax*/
+	  .intro{
+		background-attachment: initial;
+	}
+}

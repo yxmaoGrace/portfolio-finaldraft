@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Link to the favicon image -->
+	<link rel="icon" href="images/favicon1.png">
+	<!-- Link to the reset file -->
+	<link rel="stylesheet" href="css/html5reset.css">
+	<!-- Link to the stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/2d6f685057.js" crossorigin="anonymous"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKTYTSPN9H"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+  		gtag('config', 'G-PKTYTSPN9H');
+	</script>
+	<title>Scoville Scale</title>
+</head>
+
+<body>
+	<a  class="back" href="#main">Skip to Main Content</a>
+	<header>
+		<img src="images/logo.jpeg" alt="" id = "logo">
+
+		<!-- hamburger -->
+		<input type="checkbox" id="navi-toggle" class="checkbox" />
+		<label for="navi-toggle" class="button">.
+			<span class="icon">&nbsp;</span>
+		</label>
+		<div class="background">&nbsp;</div>
+
+		<nav class="nav">
+			<ul class="list">
+				<li class="item"><a href = "index.html" class="link">About Me</a></li>
+				<li class="item"><a href = "childhood.html" class="link">Childhood Memories</a></li>
+				<li class="item"><a href = "world.html" class="link">Around the World</a></li>
+				<li  class="active item"><a href = "scale.html" class="link">Scoville Scale</a></li>
+			</ul>
+		</nav>
+
+		<h1 id="main"  class="title">Scorville Scale</h1>
+	</header>
+
+	<main>
+		<h2>What Is The Scoville Scale?</h2>
+		<p>In 1912 American pharmacist Wilbur Scoville devised a test to determine the heat level of 
+			different chilies. Originally called the Scoville Organoleptic Test, it was a scientific method 
+			of testing the pungency (heat) of a pepper. At least it was as scientific as it could get considering 
+			that it was still based on how humans detect spiciness.</p>
+			<img src = "images/scoville_scale.png" alt = "Scoville scores of some common types of peppers." width="200"/>
+
+		<h2>How Does The Scoville Scale Work?</h2>
+		<p>Alcohol is used to extract the capsaicinoids from dried peppers. Then sugar water 
+			is used to dilute the capsaicinoids incrementally and given to a panel of testers. 
+			When the testers no longer discern heat the test is done.</p>
+
+		<h2>What is the Scoville scale based on?</h2>
+		<p>Human taste buds. The heat level or Scoville heat unit of the pepper is based on 
+			the amount of dilution it took for the majority of the human testers to no longer 
+			detect the heat. For example, if a pepper has a SHU (Scoville Heat Unit) of 100, 
+			that means the capsaicinoids had to be diluted 100 times for testers not to detect spiciness. 
+			This creates the pepper hotness scale.</p>
+			<img src = "images/how_scoville_scale_work.png" alt = "How does the scoville scale work?" width="200"/>
+	
+		<h2>What Is The Shortcoming Of The Scoville Scale?</h2>
+		<p>As I already explained, there are some shortcomings with the Scoville heat scale, 
+			like human taste buds. Even though testers go through training, not all taste buds taste the same. 
+			In some cases, results can vary up to 50%.
+			There is a more scientific, no humans required, test called High Performance Liquid Chromatography (HPLC) 
+			that measures in Asta Pungency Units. If you’re interested in this other method of testing be 
+			on the lookout for the article.</p>
+	</main>
+
+	<footer>
+		<i class="fa-solid fa-pepper-hot"></i>
+		<p>Yixuan Mao &copy; 2022</p>
+	</footer>
+</body>
+</html>
