@@ -7,7 +7,7 @@ body{
 
 
 /* display navigation bar in flex */
-/* header{
+header{
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -16,35 +16,29 @@ body{
   .nav_links{
 	display: flex;
 	flex-direction: column;
-  } */
-
-
-/*Change the styling for items in the nav section*/
-/* .list {
-	z-index: 200;
-	display:block;
-	position: fixed;
-	width:60%;
-	top: 40%;
   }
 
-.item{
-	font-weight: bold;
+
+/*Change the styling for all of the list 
+items in the nav section*/
+nav li{
+	color: #000;
+	font-weight: bolder;
 	background: #f3f17e;
-	padding:5px;
-	width:100%;
-	border: 2px dashed #38721d;
+	padding:10px;
+	width: 80%;
+	border: 4px dashed #38721d;
 	border-radius: 10px;
-	margin: 5px;
+	margin: 10px;
+	display: inline-block;
 	text-align: center;
-  }
-
+}
 
 .active{
 	background: #c2dab6;
     text-transform: uppercase;
 	text-align: center;
-	border: 2px solid #38721d;
+	border: 4px solid #38721d;
 }
 
 a{
@@ -58,172 +52,17 @@ a:hover{
 .active a{
 	text-decoration: overline underline;
 	color: #555408;
-} */
-
-
-/* Creating a hamburger menu for navigation bar */
-/* hamburger */
-.checkbox {
-	display: none;
-  }
-  
-  .button {
-	position: relative;
-	background-color: white;
-	height: 3rem;
-	width: 3rem;
-	border-radius: 50%;
-	position: fixed;
-	top: 5vh; 
-	right: 5vw; 
-	z-index: 2000;
-	box-shadow: 0 .2rem .5rem black;
-	text-align: center; 
-	cursor: pointer;
-	color: black;
-  }
-  
-  .background {
-	height: 3rem;
-	width: 3rem;
-	border-radius: 50%;
-	position: fixed;
-	top: 6vh; 
-	right: 6vw; 
-	background-image: radial-gradient(#c2dab6, black);
-	z-index: 1000;
-  
-	transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-  }
-  
-  .nav {
-	height: 50vh;
-	position: fixed;
-	top: 0;
-	right: -60vw;
-	z-index: 1500;
-	opacity: 0;
-	width: 0;
-	transition: all 0.8s;
-  }
-  
-  .list {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	list-style: none;
-	text-align: center;
-	width: 50%;
-  }
-  
-  .item{
-	font-weight: bold;
-	background: #f3f17e;
-	padding:5px;
-	display: block;
-	width: 100%;
-	border: 2px dashed #38721d;
-	border-radius: 10px;
-	margin: 5px;
-	text-align: center;
-  }
-  
-  .link:link,
-  .link:visited {
-	display: inline-block;
-	font-weight: bold;
-	/* padding: 1rem 2rem; */
-	color: #183d08;
-	text-decoration: none;
-	/* background-image: linear-gradient(
-	  120deg,
-	  transparent 0%,
-	  transparent 50%,
-	  white 50%
-	);
-	background-size: 220%; */
-	transition: all 0.4s;
-  }
-
-  .active{
-	background: #c2dab6;
-    text-transform: uppercase;
-	text-align: center;
-	border: 2px solid #38721d;
 }
-  
-  .link:hover {
-	font-style: italic;
-  }
 
-  .active .link{
-	text-decoration: overline underline;
-	color: #555408;
-}
-  
-  /* functionality */
-  .checkbox:checked ~ .background {
-	transform: scale(80);
-  }
-  .checkbox:checked ~ .nav {
-	opacity: 1;
-	width: 100%;
-	right: 0;
-  }
-  
-  /*  */
-  /* styling hamb ICON */
-  .icon {
-	position: absolute;
-	top: 60%;
-	left: 35%;
-	transform: translate(-50%, -50%);
-  }
-  
-  .icon,
-  .icon::before,
-  .icon::after {
-	width: 1.5rem;
-	height: 5px;
-	background-color: gray;
+.back{
+	margin: 10px;
+	border: 4px solid #38721d;
+	padding: 10px;
+	width: 40%;
 	display: inline-block;
-  }
-  
-  .icon::before,
-  .icon::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	transition: all 0.2s;
-  }
-  
-  .icon::before {
-	top: -0.8rem;
-  }
-  .icon::after {
-	top: 0.8rem;
-  }
-  
-  .button:hover icon:before {
-	top: -1rem;
-  }
-  .button:hover icon::after {
-	top: 1rem;
-  }
-  
-  .checkbox:checked + .button .icon {
-	background-color: transparent;
-  }
-  
-  .checkbox:checked + .button .icon::before {
-	top: 0;
-	transform: rotate(135deg);
-  }
-  .checkbox:checked + .button .icon::after {
-	top: 0;
-	transform: rotate(-135deg);
-  }
+	text-align: center;
+}
+
 
 
 /* skip back to main content */
@@ -232,6 +71,8 @@ a:hover{
 	border: 2px solid #38721d;
 	padding: 2px;
 	width: 20%;
+	background-color: #183d08;
+	color:white;
 	text-align: center;
 	transition: left 1s ease-out;
 	z-index: 1;
@@ -305,7 +146,6 @@ p{
 /*Style the images*/
 main img{
     max-height: 300px;
-    width:60%;
     padding: 2px;
     border-radius: 10px;
     margin: 5px auto;
@@ -363,6 +203,287 @@ main img:nth-child(even):hover{
 /* creating grids for childhood page. */
 .gridContainer{
 	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.beefNoodle,
+.lamb,
+.luosifen,
+.hotPot,
+.stirFry
+{
+  grid-column: 1;
+}
+
+.beefNoodle_image,
+.lamb_image,
+.luosifen_image,
+.hotPot_image,
+.stirFry_image{
+  grid-column: 1;
+  max-height: 500px;
+  overflow: hidden;
+  justify-self: left;
+}
+
+
+.childhood_gallery{
+ grid-column: 1;
+ justify-self: center;
+}
+
+.text{
+	align-self:center;
+	/* background-color: rgba(255, 255, 255, .8);
+	border: 5px solid #183d08; */
+	padding: 20px;
+  }  
+
+
+
+
+/* Creating flex for Around the World page. */
+.flexContainer{
+	display: flex;
+	flex-direction: column;
+}
+
+.salsas,
+.tomYum,
+.kimchi,
+.sik{
+	margin: 20px 10px;
+}
+
+
+
+/* Style the flip card on Scoville Scale page */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+	background-color: transparent;
+	width: 200px;
+	height: 300px;
+	/* border: 1px solid #f1f1f1; */
+	perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+	/* position: relative; */
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+
+  .flip-card:focus .flip-card-inner {
+	transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden; /* Safari */
+	backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+	background-color: white;
+	color: black;
+  }
+  
+  .flip-card-front img{
+	  width: 100%;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+	background-color: #38721d;
+	color: white;
+	transform: rotateY(180deg);
+  }
+
+
+/* style the footer */
+footer{
+	padding: 50px 0;
+	text-align: center;
+	color: #555408;
+	font-weight: bolder;
+	background-color:#c2dab6;
+	margin: 20px;
+}
+
+
+
+
+/* Set up the tablet view */
+/* For screen displays over 820px, which is recommended by this article: https://gbksoft.com/blog/common-screen-sizes-for-responsive-web-design/ and the best choice */
+@media screen and (min-width: 768px){
+
+/* display navigation bar in flex for desktop view */
+header{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  .nav_links{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+  }
+
+  nav li{
+	margin: 0px;
+	border-radius: 0px;
+	width: 100%;
+	border: none;
+}
+
+/* creating grids for childhood page, tablet view. */
+.gridContainer{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	row-gap: 30px;
+}
+
+.beefNoodle,
+.lamb,
+.luosifen{
+  grid-column: 1;
+}
+
+.hotPot,
+.stirFry{
+  grid-column: 2;
+}
+
+.beefNoodle_image,
+.lamb_image,
+.luosifen_image{
+  grid-column: 2;
+  max-height: 500px;
+  overflow: hidden;
+  z-index: 1;
+  justify-self: right;
+}
+
+.hotPot_image,
+.stirFry_image{
+  grid-column: 1;
+  max-height: 500px;
+  overflow: hidden;
+  z-index: 1;
+  justify-self: left;
+}
+
+
+.beefNoodle, .beefNoodle_image{
+  grid-row: 1 / 2;
+}
+
+.hotPot,.hotPot_image{
+  grid-row: 2 / 3;
+}
+
+.lamb, .lamb_image{
+  grid-row: 3 / 4;
+}
+
+.stirFry, .stirFry_image{
+  grid-row: 4 / 5;
+}
+
+.luosifen, .luosifen_image{
+  grid-row: 5 / 6;
+}
+
+.childhood_gallery{
+	grid-column: 1 / span 1;
+	justify-self: center;
+   }
+
+.text{
+  align-self:center;
+  max-height: 25vh;
+  overflow: scroll;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, .8);
+  border: 5px solid #183d08;
+  padding: 20px;
+  }  
+
+
+/* Create flex for world page, tablet view. */
+.flexContainer_inner{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.top,
+.metadata{
+	margin: 20px 20px;
+	width: 280px;
+}
+
+.paragraph{
+	margin: 20px 20px;
+	width: 1000px;
+}
+
+.world_gallery{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.world_gallery img{
+	width: 350px;
+	margin: 20px;
+}
+}
+
+
+
+/* Set up the desktop view */
+/* For screen displays over 1280px, which is recommended by this article: https://gbksoft.com/blog/common-screen-sizes-for-responsive-web-design/ as the best choice*/
+@media screen and (min-width: 1280px) {
+
+/* display navigation bar in flex for desktop view */
+header{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+  }
+  
+  .nav_links{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+  }
+
+  nav li{
+	margin: 0px;
+	border-radius: 0px;
+	width: 100%;
+	border: none;
+}
+
+/* creating grids for childhood page, desktop view. */
+.gridContainer{
+	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	row-gap: 30px;
 }
@@ -416,56 +537,75 @@ main img:nth-child(even):hover{
 }
 
 .luosifen, .luosifen_image{
-	grid-row: 5 / 6;
+  grid-row: 5 / 6;
 }
 
+.childhood_gallery{
+	grid-column: 2;
+	justify-self: center;
+   }
 
 .text{
   align-self:center;
   max-height: 25vh;
   overflow: scroll;
   z-index: 2;
-}
-
-.text{
-	background-color: rgba(255, 255, 255, .8);
-	border: 5px solid #183d08;
-	padding: 20px;
+  background-color: rgba(255, 255, 255, .8);
+  border: 5px solid #183d08;
+  padding: 20px;
   }  
 
 
-
-/* Creating flex for Around the World page. */
+/* Create flex for world page, tablet view. */
 .flexContainer{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .salsas,
 .tomYum,
 .kimchi,
 .sik{
-	margin: 20px 10px;
+	margin: 20px 30px;
+	background-color: #dee9d9;
+	flex-basis: 500px;
+	padding: 20px 20px;
+	border-radius: 30px;
+}
+
+.top,
+.metadata,
+.paragraph{
+	width: 400px;
 }
 
 
 
-/* style the footer */
-footer{
-	padding: 50px 0;
-	text-align: center;
-	color: #555408;
-	font-weight: bolder;
-	background-color:#c2dab6;
-	margin: 20px;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 /** Set for prefers reduced motion **/
 @media screen and (prefers-reduced-motion: reduce){
+	/* Turn off all animations */
+	/* *, ::after, ::before{
+		animation: none;
+	   } */
+
 	#logo{
 	  animation: none;
 	}
+
 	html{
 		scroll-behavior: auto; /* Removes scroll animation */
 	  }
@@ -479,5 +619,10 @@ footer{
 	  /*Turn off parallax*/
 	  .intro{
 		background-attachment: initial;
+	}
+
+	/* Turn off flip card */
+	.flip-card{
+		animation: none;
 	}
 }

@@ -9,12 +9,14 @@
 	<!-- Link to the reset file -->
 	<link rel="stylesheet" href="css/html5reset.css">
 	<!-- Link to the stylesheet -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/2d6f685057.js" crossorigin="anonymous"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PKTYTSPN9H"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag(){dataLayer.push(arguments);}
@@ -30,53 +32,131 @@
 	<header>
 		<img src="images/logo.jpeg" alt="" id = "logo">
 
-		<!-- hamburger -->
-		<input type="checkbox" id="navi-toggle" class="checkbox" />
-		<label for="navi-toggle" class="button">.
-			<span class="icon">&nbsp;</span>
-		</label>
-		<div class="background">&nbsp;</div>
-
-		<nav class="nav">
-			<ul class="list">
-				<li class="item"><a href = "index.html" class="link">About Me</a></li>
-				<li class="item"><a href = "childhood.html" class="link">Childhood Memories</a></li>
-				<li class="item"><a href = "world.html" class="link">Around the World</a></li>
-				<li  class="active item"><a href = "scale.html" class="link">Scoville Scale</a></li>
+        <nav>
+			<ul class="nav_links">
+			  <li><a href = "index.html" >About Me</a></li>
+			  <li><a href = "childhood.html">Childhood Memories</a></li>
+			  <li><a href = "world.html">Around the World</a></li>
+			  <li  class="active"><a href = "scale.html">Scoville Scale</a></li>
 			</ul>
-		</nav>
+		  </nav>
 
-		<h1 id="main"  class="title">Scorville Scale</h1>
 	</header>
 
 	<main>
-		<h2>What Is The Scoville Scale?</h2>
+		<h1 id="main"  class="title">Scorville Scale</h1>
+
+		<!-- <h2 tabindex="0">What Is The Scoville Scale?</h2>
 		<p>In 1912 American pharmacist Wilbur Scoville devised a test to determine the heat level of 
 			different chilies. Originally called the Scoville Organoleptic Test, it was a scientific method 
 			of testing the pungency (heat) of a pepper. At least it was as scientific as it could get considering 
-			that it was still based on how humans detect spiciness.</p>
-			<img src = "images/scoville_scale.png" alt = "Scoville scores of some common types of peppers." width="200"/>
+			that it was still based on how humans detect spiciness.</p> -->
+		
+			<!-- Adding a flip card effect for this image -->
+			<div class="flip-card" tabindex="0">
+				<div class="flip-card-inner">
+				  <div class="flip-card-front">
+					<img src = "images/scoville_scale.png" alt = "Scoville scores of some common types of peppers." width="200"/>
+				  </div>
+				  <div class="flip-card-back">
+					<h3>Scoville Scale</h3>
+					<p>A higher score means the pepper is spicier.</p>
+				  </div>
+				</div>
+			  </div>
 
-		<h2>How Does The Scoville Scale Work?</h2>
+
+		<!-- <h2 tabindex="0">How Does The Scoville Scale Work?</h2>
 		<p>Alcohol is used to extract the capsaicinoids from dried peppers. Then sugar water 
 			is used to dilute the capsaicinoids incrementally and given to a panel of testers. 
-			When the testers no longer discern heat the test is done.</p>
+			When the testers no longer discern heat the test is done.</p> -->
 
-		<h2>What is the Scoville scale based on?</h2>
+		<!-- <h2 tabindex="0">What is the Scoville scale based on?</h2>
 		<p>Human taste buds. The heat level or Scoville heat unit of the pepper is based on 
 			the amount of dilution it took for the majority of the human testers to no longer 
 			detect the heat. For example, if a pepper has a SHU (Scoville Heat Unit) of 100, 
 			that means the capsaicinoids had to be diluted 100 times for testers not to detect spiciness. 
 			This creates the pepper hotness scale.</p>
-			<img src = "images/how_scoville_scale_work.png" alt = "How does the scoville scale work?" width="200"/>
+			<img src = "images/how_scoville_scale_work.png" alt = "How does the scoville scale work?" width="200"/> -->
 	
-		<h2>What Is The Shortcoming Of The Scoville Scale?</h2>
+		<!-- <h2 tabindex="0">What Is The Shortcoming Of The Scoville Scale?</h2>
 		<p>As I already explained, there are some shortcomings with the Scoville heat scale, 
 			like human taste buds. Even though testers go through training, not all taste buds taste the same. 
 			In some cases, results can vary up to 50%.
 			There is a more scientific, no humans required, test called High Performance Liquid Chromatography (HPLC) 
 			that measures in Asta Pungency Units. If you’re interested in this other method of testing be 
-			on the lookout for the article.</p>
+			on the lookout for the article.</p> -->
+
+	<div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" tabindex="0">
+        What Is The Scoville Scale?
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        In 1912 American pharmacist Wilbur Scoville devised a test to determine the heat level of 
+		different chilies. Originally called the Scoville Organoleptic Test, it was a scientific method 
+		of testing the pungency (heat) of a pepper. At least it was as scientific as it could get considering 
+		that it was still based on how humans detect spiciness.
+	</div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" tabindex="0">
+        How Does The Scoville Scale Work?
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Alcohol is used to extract the capsaicinoids from dried peppers. Then sugar water 
+		is used to dilute the capsaicinoids incrementally and given to a panel of testers. 
+		When the testers no longer discern heat the test is done.
+	</div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" tabindex="0">
+        What is the Scoville scale based on?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        Human taste buds. The heat level or Scoville heat unit of the pepper is based on 
+			the amount of dilution it took for the majority of the human testers to no longer 
+			detect the heat. For example, if a pepper has a SHU (Scoville Heat Unit) of 100, 
+			that means the capsaicinoids had to be diluted 100 times for testers not to detect spiciness. 
+			This creates the pepper hotness scale.
+			<img src = "images/how_scoville_scale_work.png" alt = "How does the scoville scale work?" width="200"/>
+	  </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" tabindex="0">
+        What Is The Shortcoming Of The Scoville Scale?
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+		As I already explained, there are some shortcomings with the Scoville heat scale, 
+		like human taste buds. Even though testers go through training, not all taste buds taste the same. 
+		In some cases, results can vary up to 50%.
+		There is a more scientific, no humans required, test called High Performance Liquid Chromatography (HPLC) 
+		that measures in Asta Pungency Units. If you're interested in this other method of testing be 
+		on the lookout for the article.</div>
+	  </div>
+    </div>
+  </div>
+
+</div>
+
 	</main>
 
 	<footer>
