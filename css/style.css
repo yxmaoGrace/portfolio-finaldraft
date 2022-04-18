@@ -162,7 +162,6 @@ main img:nth-child(even){
 }
 
 main img:hover{
-	width:60%;
 	opacity:1;
 	transition: 1s ease;
 }
@@ -234,8 +233,6 @@ main img:nth-child(even):hover{
 
 .text{
 	align-self:center;
-	/* background-color: rgba(255, 255, 255, .8);
-	border: 5px solid #183d08; */
 	padding: 20px;
   }  
 
@@ -327,18 +324,16 @@ footer{
 
 
 /* Set up the tablet view */
-/* For screen displays over 820px, which is recommended by this article: https://gbksoft.com/blog/common-screen-sizes-for-responsive-web-design/ and the best choice */
+/* For screen displays over 768px */
 @media screen and (min-width: 768px){
 
 /* display navigation bar in flex for desktop view */
 header{
-	display:flex;
 	flex-direction: column;
 	align-items: center;
   }
   
   .nav_links{
-	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
   }
@@ -350,9 +345,14 @@ header{
 	border: none;
 }
 
+/* change the image sizing for tablet view */
+main img{
+    max-height: 500px;
+	width: 80%;
+}
+
 /* creating grids for childhood page, tablet view. */
 .gridContainer{
-	display: grid;
 	grid-template-columns: 1fr 1fr;
 	row-gap: 30px;
 }
@@ -372,21 +372,14 @@ header{
 .lamb_image,
 .luosifen_image{
   grid-column: 2;
-  max-height: 500px;
-  overflow: hidden;
-  z-index: 1;
   justify-self: right;
 }
 
 .hotPot_image,
 .stirFry_image{
   grid-column: 1;
-  max-height: 500px;
-  overflow: hidden;
-  z-index: 1;
   justify-self: left;
 }
-
 
 .beefNoodle, .beefNoodle_image{
   grid-row: 1 / 2;
@@ -414,7 +407,6 @@ header{
    }
 
 .text{
-  align-self:center;
   max-height: 25vh;
   overflow: scroll;
   z-index: 2;
@@ -457,19 +449,17 @@ header{
 
 
 /* Set up the desktop view */
-/* For screen displays over 1280px, which is recommended by this article: https://gbksoft.com/blog/common-screen-sizes-for-responsive-web-design/ as the best choice*/
-@media screen and (min-width: 1280px) {
+/* For screen displays over 992px */
+@media screen and (min-width: 992px) {
 
 /* display navigation bar in flex for desktop view */
 header{
-	display:flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
   }
   
   .nav_links{
-	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
   }
@@ -479,6 +469,12 @@ header{
 	border-radius: 0px;
 	width: 100%;
 	border: none;
+}
+
+/* change the image sizing for tablet view */
+main img{
+    max-height: 600px;
+	width: 100%;
 }
 
 /* creating grids for childhood page, desktop view. */
@@ -504,18 +500,12 @@ header{
 .lamb_image,
 .luosifen_image{
   grid-column: 2 / span 2;
-  max-height: 500px;
-  overflow: hidden;
-  z-index: 1;
   justify-self: right;
 }
 
 .hotPot_image,
 .stirFry_image{
   grid-column: 1 / span 2;
-  max-height: 500px;
-  overflow: hidden;
-  z-index: 1;
   justify-self: left;
 }
 
@@ -579,18 +569,7 @@ header{
 .paragraph{
 	width: 400px;
 }
-
-
-
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -598,9 +577,9 @@ header{
 /** Set for prefers reduced motion **/
 @media screen and (prefers-reduced-motion: reduce){
 	/* Turn off all animations */
-	/* *, ::after, ::before{
+	*, ::after, ::before{
 		animation: none;
-	   } */
+	   }
 
 	#logo{
 	  animation: none;
